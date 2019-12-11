@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html>
+ <head>
+    <title>animation</title>
+	 <style>
+	   #diamond {
+	      height: 95.7px;
+	   	  width: 109.7px;
+		  display: block;
+		  margin: auto;
+		  margin-top: 40px;
+		  padding-top: 40px;
+		  -webkit-animation: diamond 3s ease-in-out infinite;
+		  -0-animation: diamond 3s ease-in-out infinite;
+	      -moz-animation: diamond 3s ease-in-out infinite;
+
+	   }
+	   body {
+	   margin: 0px auto;
+	   }
+
+	   @-webkit-keyframes diamond {
+	   0%{-webkit-transform: rotate(0deg) translateY(0px);}
+	   20%{-webkit-transform: rotate(-5deg) translateX(-10px); opacity: 1;}
+	   40%{-webkit-transform: rotate(5deg) translateX(10px); opacity: .5;}
+	   60%{-webkit-transform: rotate(-5deg) translateX(10px); opacity: .7;}
+	   80%{-webkit-transform: rotate(5deg) translateY(10px); opacity: .3}
+	   0%{-webkit-transform: rotate(0deg) translateY(0px);}
+	   }
+
+
+	   #box{
+	   height: 200px;
+	   width:200px;
+	   background-color: #2c3e50;
+	   border-radius: 20px;
+	   box-shadow: 0px 0px 40px grey;
+	   margin: auto;
+
+	   }
+
+
+	 </style>
+
+ </head>
+ <body>
+  <div id="box">
+    <img src="img/svg-icons/rocket.svg" id="diamond">
+  </div
+
+
+ </body>
+</html>
