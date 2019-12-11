@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Multi-Color Header Change</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		 <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+		 <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+
+
+		
+	</head>
+	<body>
+
+<!-- color changing header -->
+    <div id="topbar" class="a">
+    </div>
+
+<!-- end of color changing header   -->
+
+<!-- navigation start -->
+    <ul class="nav nav-tabs nav-justified">
+      <li onhover="change();"><a class="red" href="#" >Red</a></li>
+      <li ><a class="blue" href="#">Blue</a></li>
+      <li ><a class="green" href="#" >Green</a></li>
+      <li ><a class="yellow" href="#">Yellow</a></li>
+      <li ><a class="purple" href="#">Purple</a></li>
+    </ul>
+
+
+<!-- Nav End -->
+<div class="jumbotron jumbotron-background">
+	<div class="container jumbo-container">
+     <h1>CHECK THIS OUT!</h1>
+     <p>even more text here!</p>
+    </div>
+
+</div>
+
+<div class="container greycontainer">
+ <div class="row ">
+  
+   <div class="col-md-6">
+   <div class="windows "> 
+	<div class="overtext">
+		<h2>PHOTO 1</h2>
+		<p>Text for the photo is right here. A description follows and here is more text to fill out the paragraph.</p>
+	</div> 
+   </div>
+   
+   </div>
+   <div class="col-md-6">
+   <div class="windows ">
+   	<div class="overtext">
+		<h2>PHOTO 2</h2>
+		<p>Text for the second photo is right here. A description follows and here is more text to fill out the paragraph.</p>
+	</div> 
+   </div>
+   </div>
+   
+   <div class="row">
+    <div class="col-md-6 ">
+	 <div class="x">
+	 <h2>Hello Title!</h2>
+	 <p>text goes here. as much as you want !!!!</p>
+	 </div>
+	</div>
+   
+    <div class="col-md-6 ">
+	 <div class="x">
+	 <h2>Hello Title!</h2>
+	 <p>Even more text goes here. as much as you want !!!!</p>
+	 </div>
+	</div>
+	
+   </div>
+</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<script>
+
+
+
+
+	
+		//	var x = $(this).attr("class");
+        
+		
+        $('.nav-tabs.nav-justified>li>a').hover( function () {
+            var x = $(this).attr("class"); 
+            $("#topbar").addClass(  x  );
+           	var y = $(this).html() ;
+            $("#topbar").append("<p>" + y + ".</p>" );
+        }, function () {
+        	var x = $(this).attr("class");
+            $("#topbar").removeClass( x  );
+            $("#topbar").empty();
+        });
+
+
+
+   $('.jumbotron').hover( function () {
+             
+            $(".jumbotron").addClass(  'jumbo-color'  );
+           	var y = $(this).html() ;
+           }, function () {
+        	
+            $(".jumbotron").removeClass( 'jumbo-color');
+  
+        });
+    
+    
+   
+
+
+</script>
+
+	</body>
+
+</html>

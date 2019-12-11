@@ -1,0 +1,35 @@
+
+
+* {
+ 	box-sizing: border-box;
+}
+
+.center{
+margin: auto;
+
+}
+
+html,
+body,
+.wrap {
+  
+  height: 422px;
+  width:950px;
+  margin: 20px auto ;
+}
+
+.wrap {
+  background: url('main.jpg') no-repeat;
+}
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  color: #fff;
+  font-size:10em;
+  margin: 0px;
+	text-shadow: 2px 2px 5px rgba(0,0,0, .1);
+	-webkit-mask-image: url('main.png');
+	 mask-image: url('main.png');
+	 padding: 120px 0 0 80px;
+	 height:
+}

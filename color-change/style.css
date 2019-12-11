@@ -1,0 +1,151 @@
+
+
+#topbar{
+
+	height:100px;
+	padding-top: 20px;
+}
+
+.windows{
+height: 300px;
+width: 90%;
+background-color: rgba(0,0,0, .7);
+margin: 50px auto;
+overflow: hidden;
+}
+
+
+.overtext {
+color:white;
+padding: 20px;
+background: lightgrey;
+height:300px;
+margin-top: 220px;
+}
+
+
+.jumbotron{	
+
+  height: 500px;
+ box-shadow: 0px 0px 10px 0px grey; 
+}
+
+.jumbotron-background{
+ background-repeat: no-repeat;
+ background-image: url('skyline-bw.jpg');
+ background-size: auto 100%;	
+}
+
+.jumbo-color {
+
+	background-image: url('skyline.jpg');
+	-webkit-transition: background-image 4s;
+
+}
+.x {
+padding: 50px;
+}
+
+.jumbo-container {
+
+	font-family: georgia;
+	
+}
+
+
+#topbar p{
+
+    color: white;
+	text-align: center;
+	font-size: 40px;
+	font-family: 'Raleway', sans-serif;
+
+}
+
+.a {
+
+	background-color: black;
+}
+
+
+
+
+.nav-tabs.nav-justified>li>a {
+
+	border:none;
+	border-radius: 0px;
+    color:white;
+    	font-family: 'Raleway', sans-serif;
+       background:black;
+	   margin-bottom: 10px;
+	   
+
+}
+
+
+.nav-tabs.nav-justified>li>a:hover{
+    color: white;
+	-webkit-transition: background 1s;
+}
+
+.windows:hover>div{
+margin: 0px;
+ -webkit-transition: margin 2s;
+}
+
+/* color changing menu*/
+
+.red {
+
+	background-color: red;
+	-webkit-transition: background 1s;
+}
+
+
+.blue {
+
+	background-color: blue;
+	-webkit-transition: background 1s;
+}
+
+
+.green {
+
+	background-color: green;
+	-webkit-transition: background 1s;
+}
+
+
+.yellow {
+
+	background-color: yellow;
+	-webkit-transition: background 1s;
+}
+
+
+
+
+.purple {
+
+	background-color: purple;
+	-webkit-transition: background 1s;
+}
+
+
+.nav-tabs.nav-justified>li>a.red:hover {
+	background-color:red;
+}
+.nav-tabs.nav-justified>li>a.blue:hover {
+	background-color:blue;
+}
+.nav-tabs.nav-justified>li>a.green:hover {
+	background-color:green;
+	}
+
+.nav-tabs.nav-justified>li>a.yellow:hover {
+	background-color:yellow;
+}
+
+.nav-tabs.nav-justified>li>a.purple:hover {
+	background-color:purple;
+}
