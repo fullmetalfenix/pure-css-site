@@ -79,7 +79,28 @@ background-color: #2196F3;
 background-color: #CDDC39;
 }
 
-
+.slide h1{
+    font-size: 44px;
+    text-transform: uppercase;
+ }
+ .slide p {
+    font-size: 22px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+.slide button{
+    border-radius: 5px;
+    border: none;
+    padding: 17px 40px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 21px rgba(0,0,0,.5);
+    transition: box-shadow .5s, transform .5s;
+}
+.slide button:hover{
+ cursor: pointer;
+ box-shadow: 0px 0px 30px rgba(0,0,0,.6);
+ transform: scale(1.04);
+}
 
 [id^="slide"]:checked + .slide {
 left: 0;
@@ -113,14 +134,29 @@ transform: all .5s .5s;
     margin: -14px;
     text-transform: uppercase;
 }
-    /** end slider styles**/
+    /** End slider styles**/
+
+    /** Grid Section**/
+    #inner-grid{
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 20px;
+        padding: 10px;
+        min-height: 50vh;
+        margin: 40px 0px;
+    }
+    .grid-item{background: lightblue; border: 1px solid black}
+    #nested-grid{
+
+    }
+    /** End Grid Section**/
     </style>
 </head>
 <body>
     <div id="container">
         <div id="slider">
             <!-- css slider -->
-            <div style="height: 350px">
+            <div >
                 <div class="slider-wrap">
                 <section id="slider-menu">
                    <label for="slide-1-trigger"><span>One</span></label>
@@ -132,18 +168,26 @@ transform: all .5s .5s;
                       <input id="slide-1-trigger" type="radio" name="slides" checked>
                      <section class="slide slide-one">
                         <h1>Headline One</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum labore incidunt fuga! Velit quaerat aut totam cupiditate nihil necessitatibus quia commodi, eveniet laborum id omnis, corrupti distinctio nesciunt impedit esse.</p>
+                        <button>Read More</button>
                      </section>
                         <input id="slide-2-trigger" type="radio" name="slides" >
                                   <section class="slide slide-two">
                         <h1>Headline Two</h1>
-                     </section>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum labore incidunt fuga! Velit quaerat aut totam cupiditate nihil necessitatibus quia commodi, eveniet laborum id omnis, corrupti distinctio nesciunt impedit esse.</p>
+                        <button>Read More</button>
+                    </section>
                      <input id="slide-3-trigger" type="radio" name="slides" >
-                                  <section class="slide slide-three">
+                        <section class="slide slide-three">
                         <h1>Headline Three<h1/>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum labore incidunt fuga! Velit quaerat aut totam cupiditate nihil necessitatibus quia commodi, eveniet laborum id omnis, corrupti distinctio nesciunt impedit esse.</p>
+                        <button>Read More</button>
                      </section>
                      <input id="slide-4-trigger" type="radio" name="slides" >
                                   <section class="slide slide-four">
                         <h1>Headline Four</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum labore incidunt fuga! Velit quaerat aut totam cupiditate nihil necessitatibus quia commodi, eveniet laborum id omnis, corrupti distinctio nesciunt impedit esse.</p>
+                        <button>Read More</button>
                      </section>
                 </div>
         
@@ -154,12 +198,35 @@ transform: all .5s .5s;
 
             <!-- End CSS Slider-->
         </div>
+        <!-- Grid Section-->
         <div id="inner-grid">
-            <!-- -->
+            <div class="grid-item">
+
+            </div>
+            <div class="grid-item" id="nested-grid">
+                <div class="lil-grid-item"></div>
+                <div class="lil-grid-item"></div>
+                <div class="lil-grid-item"></div>
+                <div class="lil-grid-item"></div>
+                <div class="lil-grid-item"></div>
+                <div class="lil-grid-item"></div>
+            </div>
         </div>
+        <!--End Grid Section -->
+
+        <!-- Mask Section -->        
+        <div id="mask-section">
+
+        </div>
+        <!-- End Mask Section-->
+
+        
+        <!-- Accordian Section-->
         <div id="accordian-section">
-            <!-- -->
         </div>
+        
+        <!-- End accordian Section-->
+
     </div>
 </body>
 </html>
