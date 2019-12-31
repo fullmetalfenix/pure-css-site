@@ -165,8 +165,7 @@ transform: all .5s .5s;
         }
     #nested-grid .lil-grid-item:nth-child(1){
         background: #76FF03;
-        grid-column-start: 1;
-        grid-column-end: 3;
+
         grid-row-start: 1;
         grid-row-end: 3;
     }
@@ -255,7 +254,10 @@ max-height: 6.25em;
 }
 #accordian-section{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
+    margin: 80px 0px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 /** End accordian css**/
     </style>
