@@ -20,6 +20,14 @@ body,
 
 .wrap {
   background: url('main.jpg') no-repeat;
+  -webkit-mask-image: url('main.png');
+  -webkit-mask-size: 100vmin;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url('main.png');
+  mask-size: 100vmin;
+  mask-repeat: no-repeat;
+  mask-position: center;
 }
 
 h1 {
@@ -28,8 +36,20 @@ h1 {
   font-size:10em;
   margin: 0px;
 	text-shadow: 2px 2px 5px rgba(0,0,0, .1);
-	-webkit-mask-image: url('main.png');
-	 mask-image: url('main.png');
 	 padding: 120px 0 0 80px;
 	 height:
+}
+.tobemasked{
+  height: 400px;
+  width: 800px;
+  object-fit: cover;
+  -webkit-mask-size: cover;
+  -webkit-mask-image: url('main.png');
+  
+  /* background: cover;
+  background: url('main.jpg') no-repeat;
+  mask-image: url('main.png');
+  mask-size: 100vmin;
+  mask-repeat: no-repeat;
+  mask-position: center; */
 }
