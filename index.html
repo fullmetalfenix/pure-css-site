@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 
+        Plan: 
+        Kockout text headline / hero
+        slashed section w/ mix-blend mode headlines and img background mask 
+        slider testimonials w. clipping
+        add contact us button pop up form modal
+        ? tooltip? if needed
+    -->
+    <!-- Couldn't find my css modal mod so I pullled from here: https://www.labnol.org/code/20083-modal-popup-css-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -260,6 +269,113 @@ max-height: 6.25em;
     box-sizing: border-box;
 }
 /** End accordian css**/
+
+
+/** Modal **/
+.modal-window {
+  position: fixed;
+  background-color: rgba(200, 200, 200, 0.75);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+a[href="#open-modal"]{
+    min-width: 200px;
+    padding: 30px;
+    background: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window>div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 2rem;
+  background: #fff;
+  color: #444;
+}
+
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+/*** End Modal ***/
+
+.knockout-text{
+            text-align: center;
+            background:url("knockout-text-background.jpg") center;
+            background-size:contain;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color:transparent;
+            font-weight: 800;
+        }
+        .slashed-container{
+          display: flex; 
+          background: white;
+        }
+        .left-slash-one{
+          height: 400px;
+          width: 50%
+        }
+ 
+        .right-slash-one{
+          background: red/*url('dr.jpg');*/;
+          height: 400px;
+          width: 50%;
+          clip-path: polygon(24% 0,100% 0,100% 100%,0 100%);
+          background-size: cover;
+        }
+        .right-slash-two{
+          height: 400px;
+          width: 50%
+        }
+ 
+        .left-slash-two{
+          background: red/*url('online.jpg');*/;
+          height: 400px;
+          background-size: cover;
+          width: 50%;
+          clip-path: polygon(0% 0,100% 0,76% 100%,0 100%);
+        }
+
     </style>
 </head>
 <body>
@@ -375,6 +491,48 @@ max-height: 6.25em;
      
 
         <!-- end accordian section -->
+
+
     </div>
+    </div>
+    </div>
+            <!-- modal -->
+            <a href="#open-modal">Open Modal</a>
+            <div id="open-modal" class="modal-window">
+              <div>
+                <a href="#modal-close" title="Close" class="modal-close">close &times;</a>
+                <h1>CSS Modal</h1>
+                <div>The quick brown fox jumped over the lazy dog.</div>
+              </div>
+            </div>
+    
+            <!-- End Modal -->
+    
+
+            <div id="hero">
+                <h1 class="knockout-text">Headline</h1>
+              </div>
+            <div class="slashed-container">
+              <div class="left-slash-one">
+                <h2 >Headline</h2>
+                  <p class="">
+                </p>
+              </div>
+              <div class="right-slash-one">
+        
+              </div>
+            </div>
+            <div class="slashed-container">
+              <div class="left-slash-two">
+        
+              </div>
+              <div class="right-slash-two ">
+                <h2 >Headline</h2>
+                <p class="">
+                </p>
+                
+              </div>
+            </div>
+        
 </body>
 </html>
